@@ -68,13 +68,28 @@ pasv_max_port=50000
 
 user_sub_token=$USER
 local_root=/home/$USER/ftp
+
+ssl_enable=YES
+rsa_cert_file=/etc/ssl/private/vsftpd.pem
+rsa_private_key_file=/etc/ssl/private/vsftpd.pem
+allow_anon_ssl=NO
+force_local_data_ssl=YES
+force_local_logins_ssl=YES
+ssl_tlsv1=YES
+ssl_sslv2=NO
+ssl_sslv3=NO
+require_ssl_reuse=NO
+ssl_ciphers=HIGH
 ```
-### Шаг 5. Перезагрузка демона
+
+### Шаг 5. Создание сертификата
+
+```openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem```
+
+### Шаг 6. Перезагрузка демона
 
 ```systemctl restart vsftpd.service```
 
 ```systemctl status vsftpd.service```
 
-### Шаг 6. Создание сертификата
 
-```openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem```
