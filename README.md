@@ -40,4 +40,29 @@
 
 ```chown ftpd:ftpd /home/ftpd/ftp/files```
 
-### Шаг 4. 
+### Шаг 4. Редактирование конфига
+
+```cp /etc/vsftpd.conf /etc/vsftpd.conf_default```
+
+```nano /etc/vsftpd.conf```
+
+### Новая конфигурация:
+
+```
+listen=NO
+listen_ipv6=YES
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+chroot_local_user=YES
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+force_dot_files=YES
+pasv_min_port=40000
+pasv_max_port=50000
+```
