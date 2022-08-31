@@ -71,6 +71,7 @@ local_root=/home/$USER/ftp
 ```
 ### Шаг 5. Перезагрузка демона
 
-systemctl restart vsftpd.service
-systemctl status vsftpd.service
+```systemctl restart vsftpd.service```
+
+```systemctl status vsftpd.service```
 
