@@ -65,4 +65,12 @@ pam_service_name=vsftpd
 force_dot_files=YES
 pasv_min_port=40000
 pasv_max_port=50000
+
+user_sub_token=$USER
+local_root=/home/$USER/ftp
 ```
+### Шаг 5. Перезагрузка демона
+
+systemctl restart vsftpd.service
+systemctl status vsftpd.service
+
