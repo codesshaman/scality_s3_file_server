@@ -28,14 +28,14 @@
 
 ### Шаг 3. Создание пользователя и директорий
 
-```adduser ftpuser```
+```adduser ftpd```
 
-```mkdir /home/ftpuser/ftp```
+```mkdir /home/ftpd/ftp```
 
-```chown nobody:nogroup /home/ftpuser/ftp```
+```chown nobody:nogroup /home/ftpd/ftp```
 
-```chmod a-w /home/ftpuser/ftp```
+```chmod a-w /home/ftpd/ftp```
 
-```mkdir /home/ftpuser/ftp/files```
+```mkdir /home/ftpd/ftp/files```
 
-```sudo chown ftpuser:ftpuser /home/ftpuser/ftp/files```
+```chown ftpd:ftpd /home/ftpd/ftp/files```
