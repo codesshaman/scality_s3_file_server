@@ -39,3 +39,5 @@
 ```mkdir /home/ftpd/ftp/files```
 
 ```chown ftpd:ftpd /home/ftpd/ftp/files```
+
+### Шаг 4. 
