@@ -4,8 +4,9 @@
 
 ### Шаг 1. Установка vsftpd
 
-apt update
--```apt install vsftpd```
+```apt update```
+
+```apt install vsftpd```
 
 ```service vsftpd status```
 
