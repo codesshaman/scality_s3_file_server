@@ -75,3 +75,6 @@ local_root=/home/$USER/ftp
 
 ```systemctl status vsftpd.service```
 
+### Шаг 6. Создание сертификата
+
+```openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem```
